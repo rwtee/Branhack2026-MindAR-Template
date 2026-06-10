@@ -57,7 +57,7 @@
 
 		<!-- Place your A-Frame Primitives below -->
 		<a-entity mindar-image-target="targetIndex: 0">
-			<a-plane src="#card" position="0 0 0" width="1" height="0.6"  rotation="0 0 0">
+			<a-plane src="#card" position="0 0 0" width="1" height="0.6"  rotation="0 0 0" material="shader: holo-shimmer; shimmerIntensity: 0.5;  foilBrightness: 0.2; tiling: 1.0">
 			<!-- material="shader: hologram; glitchBarDrift: 0.05; rgbSeparation: 0.5; glitchRate: 1;" -->
 			<!-- material="shader: holo-shimmer; shimmerIntensity: 0.5;  foilBrightness: 0.2; tiling: 1.0" -->
 			</a-plane>
@@ -68,10 +68,10 @@
 			</a-plane>  -->
 
 			<!-- Backlight plane -->
-			<!-- <a-plane position="0 0 -0.02" width="1.5" height="1" rotation="0 0 0" 
-			material="shader: card-glow; color: #00e5ff; intensity: 1.35; transparent: true;
+			<a-plane position="0 0 -0.02" width="1.5" height="1" rotation="0 0 0" 
+			material="shader: card-glow	; color: #00e5ff; intensity: 1.35; transparent: true;
 			depthWrite: false; blending: additive;"> 
-			</a-plane>  -->
+			</a-plane> 
 
 			<!-- Halo rings effect -->
 			<!-- <a-plane position="0 0 -0.1" height="2.2" width="2.2" rotation="0 0 90"
@@ -79,8 +79,8 @@
 			depthWrite: false; blending: additive;">
 			</a-plane>  -->
 
-			<a-text text="value: Your name" align="left" position="-0.44 0.08 0" width="1.5"></a-text> 
-			<a-text text="value: Your title" align="left" position="-0.44 0.02 0" width="1"></a-text>
+			<a-text text="value: Tee Ren Wey" align="left" position="-0.44 0.08 0" width="1.5"></a-text> 
+			<a-text text="value: Year 2 NUS Computer Engineering" align="left" position="-0.44 0.02 0" width="1"></a-text>
 			
 			<!-- Clickable text using HTML href attribute -->
 			<a-text text="value: Contact Me; align: center; width: 1"
@@ -94,9 +94,9 @@
 				position="0 -0.33 0.01" class="clickable" navigate-on-click="url: www.linkedin.com/in/ren-wey-tee-a19955225">
 			</a-text> 
 
-			<a-entity position="0.35 0.2 0.1" rotation="90 0 0"> 
+			<a-entity position="0 -0.2 0.2" rotation="0 0 0"> 
 				<a-gltf-model id="avatarModel" src="#avatarModel"
-				position="0 0 0" rotation="0 0 0" scale="0.4 0.4 0.4" >
+				position="0 0 0" rotation="0 0 0" scale="0.4 0.4 0.4">
 				<!-- Glitch component -->
 				<!-- effect-glitch="part: M_Tone01, Robot_Dog; color: #ff3aa3; intensity: 2; glitchRate: 1" -->
 				<!-- Glow component -->
