@@ -1,24 +1,16 @@
-# [This is the Project Title] 
+# My Personal AR Namecard
 
-A brief description of what this project does and who it's for.  
-
- 
+This is an Augmented Reality (AR) namecard with my details.
 
 # Hi, I'm Ren Wey! 👋 
-
- 
 
 ## 🚀 About Me 
 
 I am an incoming Year 2 NUS Computer Engineering student.
 
- 
-
 ## 🛠 Skills 
 
 I can code in C and C++, and I am currently learning Python. 
-
- 
 
 ## 🔗 Links 
 
