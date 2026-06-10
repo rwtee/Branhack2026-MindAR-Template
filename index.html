@@ -19,7 +19,22 @@
                 }); 
             } 
         }); 
-	</script> 
+	</script>
+	
+	<!-- Card Effects --> 
+	<script src="https://unpkg.com/aframe-hologram-shader"></script> 
+	<script src="./effects/holo-shimmer.js"></script> 
+	<script src="./effects/matrix-stream.js"></script> 
+	<script src="./effects/card-glow.js"></script> 
+	<script src="./effects/halo-rings.js"></script> 
+	<script src="./effects/shader-time.js"></script>
+
+	<script src="./components/avatar-effect-utils.js"></script> 
+	<!-- glTF Effects --> 
+	<script src="./components/effect-glitch.js"></script> 
+	<script src="./components/effect-glow.js"></script> 
+	<script src="./components/effect-matrix.js"></script> 
+
 </head>
 
 <body>
@@ -42,7 +57,27 @@
 
 		<!-- Place your A-Frame Primitives below -->
 		<a-entity mindar-image-target="targetIndex: 0">
-			<a-plane src="#card" position="0 0 0" width="1" height="0.6"  rotation="0 0 0"></a-plane>
+			<a-plane src="#card" position="0 0 0" width="1" height="0.6"  rotation="0 0 0">
+			<!-- material="shader: hologram; glitchBarDrift: 0.05; rgbSeparation: 0.5; glitchRate: 1;" -->
+			<!-- material="shader: holo-shimmer; shimmerIntensity: 0.5;  foilBrightness: 0.2; tiling: 1.0" -->
+			</a-plane>
+
+			<!-- Matrix plane -->
+			<!-- <a-plane position="0 0 0.01" width="1" height="0.6" rotation="0 0 0"
+			matrix-stream="color: #63ff9d; intensity: 0.85; columns: 15; speed: 120"> 
+			</a-plane>  -->
+
+			<!-- Backlight plane -->
+			<!-- <a-plane position="0 0 -0.02" width="1.5" height="1" rotation="0 0 0" 
+			material="shader: card-glow; color: #00e5ff; intensity: 1.35; transparent: true;
+			depthWrite: false; blending: additive;"> 
+			</a-plane>  -->
+
+			<!-- Halo rings effect -->
+			<!-- <a-plane position="0 0 -0.1" height="2.2" width="2.2" rotation="0 0 90"
+			shader-time material="shader: halo-rings; color: #00e5ff; intensity: 0.9; transparent: true;
+			depthWrite: false; blending: additive;">
+			</a-plane>  -->
 
 			<a-text text="value: Your name" align="left" position="-0.44 0.08 0" width="1.5"></a-text> 
 			<a-text text="value: Your title" align="left" position="-0.44 0.02 0" width="1"></a-text>
@@ -60,7 +95,15 @@
 			</a-text> 
 
 			<a-entity position="0.35 0.2 0.1" rotation="90 0 0"> 
-				<a-gltf-model id="avatarModel" src="#avatarModel" position="0 0 0" rotation="0 0 0" scale="0.4 0.4 0.4" ></a-gltf-model> 
+				<a-gltf-model id="avatarModel" src="#avatarModel"
+				position="0 0 0" rotation="0 0 0" scale="0.4 0.4 0.4" >
+				<!-- Glitch component -->
+				<!-- effect-glitch="part: M_Tone01, Robot_Dog; color: #ff3aa3; intensity: 2; glitchRate: 1" -->
+				<!-- Glow component -->
+				<!-- effect-glow="part: M_Tone01, Robot_Dog; color: #00e5ff; intensity: 1"  -->
+				<!-- Matrix component -->
+				<!-- effect-matrix="part: M_Tone01, Robot_Dog; color: #00e5ff; columns:50; speed:120; intensity: 1" -->
+			</a-gltf-model> 
 			</a-entity> 
 
 		</a-entity>
